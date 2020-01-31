@@ -1,4 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.background-img {
+    background: url("assets/img/rey-han-solo-star-wars-youtube-hyperspace-shows.jpg");
+    background-size: cover;
+    height: 100%;
+    padding: 25px;
+
+}

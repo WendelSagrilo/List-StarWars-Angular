@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './Home/home.component';
 import { NotFoundComponent } from './Not-found/not-found.component';
 import { ListCharactersComponent } from './list-characters/list-characters.component';
-
+import { MatCardModule } from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,8 @@ import { ListCharactersComponent } from './list-characters/list-characters.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

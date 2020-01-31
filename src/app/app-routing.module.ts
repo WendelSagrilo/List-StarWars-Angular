@@ -4,7 +4,7 @@ import { HomeComponent } from './Home/home.component';
 import { NotFoundComponent } from './Not-found/not-found.component';
 
 const routes: Routes = [
-  { path: 'Home', component: HomeComponent },
+  { path: 'Home', component: HomeComponent},
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent }
 ];

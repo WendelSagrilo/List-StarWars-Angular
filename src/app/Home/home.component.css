@@ -1,0 +1,11 @@
+.title-page {
+    color: red;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    
+}
+
+.card {
+    width: 75%;
+    margin: auto;
+}
