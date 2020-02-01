@@ -1,0 +1,30 @@
+.img-char {
+    display: block;
+    z-index:100
+}
+
+.info-char {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-weight: 900;
+}
+
+.border-char {
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.border-char:hover {
+    transition:300ms;
+    cursor: pointer;
+    padding: 0;
+}
+
+.name-char {
+    display: block;
+}
+
+.position-char {
+    display: block;
+}

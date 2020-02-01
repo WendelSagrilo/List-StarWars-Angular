@@ -1,11 +1,27 @@
+@font-face {
+    font-family: Star Jedi;
+    src: url(./../../assets/fonts/star_jedi/starjedi/Starjedi.ttf) format("opentype");
+  }
+
+
+
+
+
 .title-page {
-    color: red;
+    color: yellow;
     background: rgba(0, 0, 0, 0.8);
     text-align: center;
+    font-family: 'Star Jedi', 'sans-serif'
     
 }
 
 .card {
     width: 75%;
     margin: auto;
+}
+
+.title-card{
+    font-family: 'Star Jedi', 'sans-serif';
+    text-align: center
+    
 }
