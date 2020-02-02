@@ -10,6 +10,7 @@ import { NotFoundComponent } from './Not-found/not-found.component';
 import { ListCharactersComponent } from './shared/components/list-characters/list-characters.component';
 import { CharacterComponent } from './shared/components/character/character.component';
 import { HoverStyleDirective } from './shared/directives/hover-style/hover-style.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HoverStyleDirective } from './shared/directives/hover-style/hover-style
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
+    HttpClientModule
 
   ],
   providers: [],
