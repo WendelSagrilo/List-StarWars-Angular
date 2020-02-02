@@ -23,6 +23,7 @@ import { LoadingInterceptor } from './shared/services/loading.interceptor';
     ListCharactersComponent,
     CharacterComponent,
     LoadingComponent,
+    HoverStyleDirective
   ],
   imports: [
     BrowserModule,

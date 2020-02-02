@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HoverStyleDirective } from './hover-style.directive';
 
 @NgModule({
-  declarations: [HoverStyleDirective],
-  exports: [HoverStyleDirective]
+  declarations: [],
+  exports: []
 })
 export class HoverStyleModule { }
