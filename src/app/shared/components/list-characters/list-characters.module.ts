@@ -4,7 +4,7 @@ import { CharacterModule } from '../character/character.module';
 import { ListCharactersComponent } from './list-characters.component';
 
 @NgModule({
-  declarations: [ListCharactersComponent],
+  declarations: [],
   imports: [
     CommonModule,
     CharacterModule

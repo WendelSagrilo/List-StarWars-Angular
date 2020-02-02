@@ -12,6 +12,6 @@ export class CharacterService {
   constructor(private http: HttpClient) { }
 
   getCharacters() {
-    return this.http.get<Character>(URL_REQUEST);
+    return this.http.get<Character[]>(URL_REQUEST);
   }
 }

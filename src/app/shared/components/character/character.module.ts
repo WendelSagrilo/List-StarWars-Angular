@@ -4,7 +4,7 @@ import { CharacterComponent } from './character.component';
 import { HoverStyleModule } from '../../directives/hover-style/hover-style.module';
 
 @NgModule({
-  declarations: [CharacterComponent],
+  declarations: [],
   imports: [
     CommonModule,
     HoverStyleModule,

@@ -12,13 +12,13 @@ export class HoverStyleDirective {
 
     @HostListener('mouseover')
     scaleOn() {
-        this.render.setElementStyle(this.element.nativeElement, 'filter', 'brightness(70%)');
+        this.render.setElementStyle(this.element.nativeElement, 'filter', 'brightness(100%)');
  
     }
 
     @HostListener('mouseleave')
     scaleOff() {
-        this.render.setElementStyle(this.element.nativeElement, 'filter', 'brightness(100%)');
+        this.render.setElementStyle(this.element.nativeElement, 'filter', 'brightness(70%)');
  
     }
 }

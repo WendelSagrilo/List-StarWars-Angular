@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Character } from '../../models/character';
 import { CharacterService } from '../../services/character.service';
+
 
 @Component({
   selector: 'app-list-characters',
@@ -10,11 +11,15 @@ import { CharacterService } from '../../services/character.service';
 export class ListCharactersComponent implements OnInit {
 
   constructor(private serviceCharacter: CharacterService) { }
+  @Output() getCharacters: EventEmitter<Character[]> = new EventEmitter()
 
-  characters: Character[]
+  @Input() characters: Character[];
+  
   ngOnInit() {
     this.serviceCharacter.getCharacters().subscribe((response) => {
       this.characters = response;
+
+      this.getCharacters.emit(this.characters);
     }, (error) => {
       alert('error when performing the query, try again...');
 
