@@ -1,6 +1,8 @@
 .img-char {
     display: block;
-    z-index:100
+    z-index: 100;
+    height: 180px;
+    background-attachment: fixed;
 }
 
 .info-char {
@@ -16,7 +18,7 @@
 }
 
 .border-char:hover {
-    transition:300ms;
+    transition: 300ms;
     cursor: pointer;
     padding: 0;
 }

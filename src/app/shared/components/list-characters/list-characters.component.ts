@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Character } from '../../models/character';
+import { CharacterService } from '../../services/character.service';
 
 @Component({
   selector: 'app-list-characters',
@@ -8,63 +9,16 @@ import { Character } from '../../models/character';
 })
 export class ListCharactersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private serviceCharacter: CharacterService) { }
 
   characters: Character[]
   ngOnInit() {
-    this.characters = [
-      {
-        id: 1,
-        name: "Obi-Wan Kenobi",
-        position: "Chefe de Operações",
-        pathImage: "https://i.pinimg.com/originals/80/64/20/806420e6174b803e1f1c1fa79546e1cb.jpg",
-        description: `Pessoa bacaninha e lorem ipsum 
-        Pessoa bacaninha e lorem ipsum Pessoa bacaninha e lorem ipsum`
-      },
-      {
-        id: 2,
-        name: "Obi-Wan Kenobi",
-        position: "Chefe de Operações",
-        pathImage: "https://i.pinimg.com/originals/80/64/20/806420e6174b803e1f1c1fa79546e1cb.jpg",
-        description: `Pessoa bacaninha e lorem ipsum 
-        Pessoa bacaninha e lorem ipsum Pessoa bacaninha e lorem ipsum`
-      },
-      {
-        id: 3,
-        name: "Obi-Wan Kenobi",
-        position: "Chefe de Operações",
-        pathImage: "https://i.pinimg.com/originals/80/64/20/806420e6174b803e1f1c1fa79546e1cb.jpg",
-        description: `Pessoa bacaninha e lorem ipsum 
-        Pessoa bacaninha e lorem ipsum Pessoa bacaninha e lorem ipsum`
-      },
-      {
-        id: 4,
-        name: "Obi-Wan Kenobi",
-        position: "Chefe de Operações",
-        pathImage: "https://i.pinimg.com/originals/80/64/20/806420e6174b803e1f1c1fa79546e1cb.jpg",
-        description: `Pessoa bacaninha e lorem ipsum 
-        Pessoa bacaninha e lorem ipsum Pessoa bacaninha e lorem ipsum`
-      },
-      {
-        id: 5,
-        name: "Obi-Wan Kenobi",
-        position: "Chefe de Operações",
-        pathImage: "https://i.pinimg.com/originals/80/64/20/806420e6174b803e1f1c1fa79546e1cb.jpg",
-        description: `Pessoa bacaninha e lorem ipsum 
-        Pessoa bacaninha e lorem ipsum Pessoa bacaninha e lorem ipsum`
-      },
-      {
-        id: 6,
-        name: "Obi-Wan Kenobi",
-        position: "Chefe de Operações",
-        pathImage: "https://i.pinimg.com/originals/80/64/20/806420e6174b803e1f1c1fa79546e1cb.jpg",
-        description: `Pessoa bacaninha e lorem ipsum 
-        Pessoa bacaninha e lorem ipsum Pessoa bacaninha e lorem ipsum`
-      },
+    this.serviceCharacter.getCharacters().subscribe((response) => {
+      this.characters = response;
+    }, (error) => {
+      alert('error when performing the query, try again...');
 
-    ]
-
-
+    })
   }
 
 }
