@@ -1,15 +1,13 @@
 @font-face {
     font-family: Star Jedi;
     src: url(./../../assets/fonts/star_jedi/starjedi/Starjedi.ttf) format("opentype");
-  }
-
+}
 
 .title-page {
     color: yellow;
     background: rgba(0, 0, 0, 0.8);
     text-align: center;
     font-family: 'Star Jedi', 'sans-serif'
-    
 }
 
 .card {
@@ -17,8 +15,20 @@
     margin: auto;
 }
 
-.title-card{
+.title-card {
     font-family: 'Star Jedi', 'sans-serif';
     text-align: center
-    
+}
+
+.btn-card{
+    font-weight: 900;
+}
+
+@media only screen and (max-width: 575px) {
+    .footer-card {
+        flex-direction: column;
+    }
+    .btn-card {
+        margin-bottom: 8px !important;
+    }
 }

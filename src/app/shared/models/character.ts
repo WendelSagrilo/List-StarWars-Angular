@@ -1,5 +1,6 @@
 export interface Character {
-    id: number,
+    idCharacter: number,
+    isJedi,
     pathImage: string,
     name: string,
     description: string,

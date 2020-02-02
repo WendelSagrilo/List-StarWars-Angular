@@ -2,10 +2,26 @@
 
 <section>
     <mat-card class="card">
-            <mat-card-title class="title-card">List of characters and their positions</mat-card-title>
-            <mat-card-content>
-                <hr>
-                <app-list-characters></app-list-characters>
-            </mat-card-content>
+        <mat-card-title class="title-card">List of characters and their positions</mat-card-title>
+        <mat-card-content>
+            <hr>
+            <app-list-characters [characters]="characters" (getCharacters)="getCharacters($event)">
+            </app-list-characters>
+
+            <div class="d-flex justify-content-around footer-card">
+                <div class="col-sm-4">
+                    <button type="button" (click)="sortList('isJedi')"
+                        class="w-100 btn-card btn btn-success">Jedis</button>
+                </div>
+                <div class="col-sm-4">
+                    <button type="button" (click)="sortList('ISWAR')" class="w-100 btn-card btn btn-danger">Clone
+                        Wars</button>
+                </div>
+                <div class="col-sm-4">
+                    <button type="button" (click)="sortList('isSith')" class="w-100 btn-card btn btn-dark">Siths</button>
+                </div>
+            </div>
+
+        </mat-card-content>
     </mat-card>
 </section>
