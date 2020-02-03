@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
       case "ISWAR":
         this.odd = !this.odd;
         this.characters = this.characters.filter((c) => {
-          this.action = '"Clone Wars!!!!"favicon.icofavicon.ico'
+          this.action = `"Clone Fuckin' Wars!!!!"`
           let random = this.odd ? 0 : 1;
           if (random == 0){
             this.scrollTop();
