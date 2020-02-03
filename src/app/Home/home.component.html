@@ -1,8 +1,20 @@
-<h1 appHoverStyle class="title-page">Wooza & Star Wars</h1>
+<h1 appHoverStyle class="title-page">
+    <span>
+        Wooza
+    </span>
+    <span *ngIf="!isMobile">
+        &
+    </span>
+    <span>
+        Star Wars
+    </span>
+</h1>
 
 <section>
     <mat-card class="card">
-        <mat-card-title class="title-card">List of characters and their positions</mat-card-title>
+        <mat-card-title class="title-card">List of characters and their positions
+            <span class="status-action">{{action}}</span>
+        </mat-card-title>
         <mat-card-content>
             <hr>
             <app-list-characters [characters]="characters" (getCharacters)="getCharacters($event)">
@@ -11,14 +23,15 @@
             <div class="d-flex justify-content-around footer-card">
                 <div class="col-sm-4">
                     <button type="button" (click)="sortList('isJedi')"
-                        class="w-100 btn-card btn btn-success">Jedis</button>
+                        class="w-100 btn-card btn btn-primary">Jedis</button>
                 </div>
                 <div class="col-sm-4">
                     <button type="button" (click)="sortList('ISWAR')" class="w-100 btn-card btn btn-danger">Clone
                         Wars</button>
                 </div>
                 <div class="col-sm-4">
-                    <button type="button" (click)="sortList('isSith')" class="w-100 btn-cardbtn-card btn btn-dark">Siths</button>
+                    <button type="button" (click)="sortList('isSith')"
+                        class="w-100 btn-cardbtn-card btn btn-dark">Siths</button>
                 </div>
             </div>
 

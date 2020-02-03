@@ -19,16 +19,34 @@
     font-family: 'Star Jedi', 'sans-serif';
     text-align: center
 }
+.status-action{
+    display: block;
+    background: black;
+    color: yellow;
+    
+}
 
 .btn-card{
     font-weight: 900;
 }
 
 @media only screen and (max-width: 575px) {
+    
     .footer-card {
         flex-direction: column;
     }
     .btn-card {
         margin-bottom: 8px !important;
     }
+    span{
+        display: block;
+    }
+    .title-card{
+        font-size: 22px !important;
+    }
+    .status-action{
+        font-size: 16px;
+        margin-top: 14px;
+    }
+    
 }
